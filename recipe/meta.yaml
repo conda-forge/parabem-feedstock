@@ -12,7 +12,7 @@ source:
     sha256: {{ sha256 }}
 
 build:
-    number: 0
+    number: 1
     skip: True  # [py<37]
 
 requirements:
@@ -30,7 +30,7 @@ requirements:
     run:
         - python
         - numpy
-        - matplotlib
+        - matplotlib-base
         - llvm-openmp  # [osx]
 
 test:

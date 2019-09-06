@@ -1,10 +1,8 @@
 mkdir -p build
 cd build
-cmake .. -G "Ninja" \
-      -DCMAKE_INSTALL_PREFIX:FILEPATH=${PREFIX} \
-      -DCMAKE_BUILD_TYPE=Release # \
-      # -DCMAKE_CXX_FLAGS="-std=c++11 -fPIC"
-
-# add last 2 lines to cmake of paraBEM
+cmake -G "Ninja" \
+      -D CMAKE_INSTALL_PREFIX:FILEPATH=${PREFIX} \
+      -D CMAKE_BUILD_TYPE:STRING=Release \
+      ..
 
 ninja install
