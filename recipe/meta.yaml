@@ -36,7 +36,7 @@ requirements:
 
 test:
   imports:
-    - paraBEM
+    - parabem
 
 about:
   home: https://github.com/booya-at/paraBEM
