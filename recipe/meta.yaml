@@ -21,12 +21,11 @@ requirements:
     - {{ compiler('cxx') }}
     - ninja
     - cmake
-    - llvm-openmp      # [osx]
   host:
     - python
     - pybind11
     - eigen
-    - openmpi      # [linux]
+    - openmpi      # [linux or win]
     - llvm-openmp      # [osx]
   run:
     - python
