@@ -1,41 +1,40 @@
-
 {% set name = "parabem" %}
-{% set version = "0.1.0" %}
-{% set sha256 = "0b2a87a788cc658b85e35b9ed8c1e4c02b1e34a300aad230dee42379dfad36d1" %}
+{% set version = "0.2.0" %}
+{% set sha256 = "0f9f209b593d84ae3c83dcf961cc5cac06d6db9c0daa601f25106954868fc04d" %}
 
 package:
-    name: {{ name }}
-    version: {{ version }}
+  name: {{ name }}
+  version: {{ version }}
 
 source:
-    url: https://github.com/booya-at/{{ name }}/archive/{{ version }}.tar.gz
-    sha256: {{ sha256 }}
+  url: https://github.com/booya-at/{{ name }}/archive/{{ version }}.tar.gz
+  sha256: {{ sha256 }}
 
 build:
-    number: 1
-    skip: True  # [py<37]
+  number: 0
+  skip: true  # [py<37]
 
 requirements:
-    build:
-        - {{ compiler('cxx') }}
-        - ninja
-        - cmake
-        - llvm-openmp  # [osx]
-    host:
-        - python
-        - pybind11
-        - eigen
-        - openmpi  # [linux]
-        - llvm-openmp  # [osx]
-    run:
-        - python
-        - numpy
-        - matplotlib-base
-        - llvm-openmp  # [osx]
+  build:
+    - {{ compiler('cxx') }}
+    - ninja
+    - cmake
+    - llvm-openmp      # [osx]
+  host:
+    - python
+    - pybind11
+    - eigen
+    - openmpi      # [linux]
+    - llvm-openmp      # [osx]
+  run:
+    - python
+    - numpy
+    - matplotlib-base
+    - llvm-openmp      # [osx]
 
 test:
-    imports:
-        - paraBEM
+  imports:
+    - paraBEM
 
 about:
   home: https://github.com/booya-at/paraBEM
