@@ -25,13 +25,13 @@ requirements:
     - python
     - pybind11
     - eigen
-    - openmpi      # [linux or win]
-    - llvm-openmp      # [osx]
+    - openmpi      # [linux]
+    - llvm-openmp      # [osx or win]
   run:
     - python
     - numpy
     - matplotlib-base
-    - llvm-openmp      # [osx]
+    - llvm-openmp      # [osx or win]
 
 test:
   imports:
