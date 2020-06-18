@@ -1,8 +1,8 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 0ee6252..ae12ac8 100755
+index 0ee6252..4131a01 100755
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -5,13 +5,15 @@ MESSAGE(STATUS "python version set: ${py}")
+@@ -5,13 +5,19 @@ MESSAGE(STATUS "python version set: ${py}")
  set(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake)
  set(CMAKE_POSITION_INDEPENDENT_CODE ON)
  
@@ -18,10 +18,14 @@ index 0ee6252..ae12ac8 100755
 -set(CMAKE_CXX_FLAGS_RELEASE "-O3")
 +set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -g")
 +set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -O3")
++
++if (WIN32)
++  add_definitions(-D_DISABLE_EXTENDED_ALIGNED_STORAGE)
++endif()
  
  # OPTIONS
  set (CMAKE_CXX_STANDARD 11)
-@@ -32,17 +34,17 @@ find_package(Eigen3 REQUIRED)
+@@ -32,17 +38,17 @@ find_package(Eigen3 REQUIRED)
  
  INCLUDE_DIRECTORIES( ${EIGEN3_INCLUDE_DIR})     # eigen3
  
