@@ -3,7 +3,7 @@ About parabem
 
 Home: https://github.com/booya-at/paraBEM
 
-Package license: GPL-3.0
+Package license: GPL-3.0-or-later
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/parabem-feedstock/blob/master/LICENSE.txt)
 
