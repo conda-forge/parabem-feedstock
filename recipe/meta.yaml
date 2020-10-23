@@ -1,6 +1,6 @@
 {% set name = "parabem" %}
-{% set version = "0.2.0" %}
-{% set sha256 = "0f9f209b593d84ae3c83dcf961cc5cac06d6db9c0daa601f25106954868fc04d" %}
+{% set version = "0.3.0" %}
+{% set sha256 = "cb2575d50abac694b72324a5ca094d78eaadf4fdfd71eefaadbdc118da9e5fcd" %}
 
 package:
   name: {{ name }}
@@ -13,7 +13,7 @@ source:
     - cmake.patch
 
 build:
-  number: 2
+  number: 0
   skip: true  # [py<37]
 
 requirements:
