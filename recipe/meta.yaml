@@ -20,6 +20,7 @@ requirements:
     - ninja
     - cmake
     - pip
+    - python
   host:
     - python
     - pybind11
