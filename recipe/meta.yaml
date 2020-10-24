@@ -9,18 +9,16 @@ package:
 source:
   url: https://github.com/booya-at/{{ name }}/archive/{{ version }}.tar.gz
   sha256: {{ sha256 }}
-  patches:
-    - cmake.patch
 
 build:
   number: 0
-  skip: true  # [py<37]
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   build:
     - {{ compiler('cxx') }}
     - ninja
-    - cmake 3.15
+    - cmake
   host:
     - python
     - pybind11
