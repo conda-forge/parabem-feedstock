@@ -13,6 +13,8 @@ source:
 build:
   number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
+  patches:
+    - minimal.patch
 
 requirements:
   build:
