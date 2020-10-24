@@ -19,9 +19,8 @@ requirements:
     - {{ compiler('cxx') }}
     - ninja
     - cmake
-    - pip
-    - python
   host:
+    - pip
     - python
     - pybind11
     - eigen
