@@ -1,0 +1,25 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 4131a01..b272dcd 100755
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -1,4 +1,9 @@
+ cmake_minimum_required(VERSION 3.0)
++
++if(NOT CMAKE_BUILD_TYPE)
++  set(CMAKE_BUILD_TYPE Release)
++endif()
++
+ project(parabem)
+ MESSAGE(STATUS "python version set: ${py}")
+ 
+@@ -8,9 +13,7 @@ set(CMAKE_POSITION_INDEPENDENT_CODE ON)
+ OPTION(BUILD_PYTHON_BINDINGS "build the python bindings" ON)
+ OPTION(BUILD_WITH_MPI "switch multithreading support" ON)
+ 
+-if(NOT CMAKE_BUILD_TYPE)
+-  set(CMAKE_BUILD_TYPE Release)
+-endif()
++
+ 
+ set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -g")
+ set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -O3")
