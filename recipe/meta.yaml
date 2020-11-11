@@ -11,6 +11,7 @@ source:
   sha256: {{ sha256 }}  
   patches:
     - minimal.patch
+    - cmake.patch
 
 build:
   number: 0
