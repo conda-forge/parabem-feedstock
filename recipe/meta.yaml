@@ -12,10 +12,10 @@ source:
   patches:
     - minimal.patch
     - cmake.patch
+    - install.patch
 
 build:
   number: 0
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   build:
