@@ -23,7 +23,6 @@ requirements:
     - ninja
     - cmake
   host:
-    - pip
     - python
     - pybind11
     - eigen
