@@ -4,4 +4,4 @@ cmake -G "Ninja" -B build -S . ^
       -D BUILD_WITH_MPI:BOOL=OFF
 
 if errorlevel 1 exit 1
-ninja install
+ninja -C build install
