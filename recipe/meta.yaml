@@ -1,6 +1,5 @@
 {% set name = "parabem" %}
-{% set version = "0.3.0" %}
-{% set sha256 = "cb2575d50abac694b72324a5ca094d78eaadf4fdfd71eefaadbdc118da9e5fcd" %}
+{% set version = "1.0.0" %}
 
 package:
   name: {{ name }}
@@ -8,20 +7,17 @@ package:
 
 source:
   url: https://github.com/booya-at/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: {{ sha256 }}  
-  patches:
-    - minimal.patch
-    - cmake.patch
-    - install.patch
+  sha256: 1d516a010b12def0a67b6f50723bd94c6ae84e376cb2a2744b685576dccf84c6
 
 build:
-  number: 2
+  number: 0
 
 requirements:
-  build:
+  build:    
+    - {{ compiler('cxx') }}
+    - {{ stdlib("c") }}
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-    - {{ compiler('cxx') }}
     - ninja
     - cmake
   host:
