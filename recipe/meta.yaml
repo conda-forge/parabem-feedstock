@@ -30,7 +30,6 @@ requirements:
     - python
     - numpy
     - matplotlib-base
-    - llvm-openmp      # [osx]
 
 test:
   imports:
