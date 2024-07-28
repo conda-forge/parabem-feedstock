@@ -1,5 +1,5 @@
 {% set name = "parabem" %}
-{% set version = "1.0.0" %}
+{% set version = "1.0.1" %}
 
 package:
   name: {{ name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/booya-at/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: 1d516a010b12def0a67b6f50723bd94c6ae84e376cb2a2744b685576dccf84c6
+  sha256: be9be2f03b3606a7f09f740bba46018ee27b80c6f2d7564266114de599c0137d
 
 build:
   number: 0
