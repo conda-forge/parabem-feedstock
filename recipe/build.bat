@@ -5,3 +5,4 @@ cmake -G "Ninja" -B build -S . ^
 
 if errorlevel 1 exit 1
 ninja -C build install
+if errorlevel 1 exit 1
